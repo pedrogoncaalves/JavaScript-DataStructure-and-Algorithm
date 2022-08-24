@@ -60,3 +60,41 @@ characteristics and behavior and define a blueprint that automates their creatio
 
 // instanceof method = check if a instance belongs to the constructor, returning true or false 
 
+
+
+/* Since he's a particularly happy dog, let's change his name to the string
+ Happy Camper. Here's how we update his object's name property:
+  ourDog.name = "Happy Camper"; or ourDog["name"] = "Happy Camper";
+   Now when we evaluate ourDog.name, instead of getting Camper, 
+   we'll get his new name, Happy Camper. */
+
+
+
+
+
+   
+// Using prototype and Object.create
+
+
+function Animal() { }
+
+Animal.prototype = {
+  constructor: Animal,
+  eat: function() {
+    console.log("nom nom nom");
+  }
+};
+
+// Only change code below this line
+
+let duck = Object.create(Animal.prototype) // Change this line
+let beagle = Object.create(Animal.prototype) // Change this line
+
+duck.eat();
+
+beagle.eat();
+
+console.log(duck instanceof Animal);
+
+// returns true
+
