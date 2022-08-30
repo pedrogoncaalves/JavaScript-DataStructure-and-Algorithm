@@ -185,6 +185,6 @@ argument is the current element being processed. The second is the
   })
   
   
-  console.log(JSON.stringify(ratings));
+  console.log(ratings);
 
 
