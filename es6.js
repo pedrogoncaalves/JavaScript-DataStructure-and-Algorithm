@@ -25,3 +25,24 @@ The let keyword behaves similarly, but with some extra features.
   console.log(howMany(0, 1, 2));
   console.log(howMany("string", null, [1, 2, 3], { }));
 
+
+
+  // Desestructuring from nested objects
+
+  const LOCAL_FORECAST = {
+    yesterday: { low: 61, high: 75 },
+    today: { low: 64, high: 77 },
+    tomorrow: { low: 68, high: 80 }
+  };
+  
+  // Only change code below this line
+    
+  // const lowToday = LOCAL_FORECAST.today.low;
+  // const highToday = LOCAL_FORECAST.today.high;
+  
+  // Desestructuring:
+
+  const {today: {low: lowtoday}} = LOCAL_FORECAST;
+
+  const {today: {high: highToday}} = LOCAL_FORECAST;
+
